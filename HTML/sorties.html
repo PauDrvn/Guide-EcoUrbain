@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos espaces à découvrir - Guide de l'EcoUrbain</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/vulga.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <div>
+                    <a href="accueil.html"><img src="../Image/logo.png" alt="logo" class="logo"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="accueil.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="especes.html">Nos espèces</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="conseil.html">Nos conseils</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="sorties.html">Nos sorties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="">Nos événements</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <div><a href=""><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a></div>
+                    <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;"
+                                id="insta"></i></a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row-4">
+            <div>
+                <img src="../Image/ban-sortie.png" alt="ban-especes" id="ban-especes" class="image-transition">
+            </div>
+        </div>
+        <!-- Contenu page avec marge -->
+        <div class="container">
+            <div class="row-1 mb-4" data-aos="fade-in">
+                <nav class="navbar rounded" id="navbar-article">
+                    <div class="container-fluid">
+                        <h1 id="titre-page-espece">Nos espaces régionaux à visiter <i class="fa-solid fa-binoculars"></i></h1>
+                        <div class="d-flex">
+                            <div class="dropdown-center">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Trier par
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Le plus récent</a></li>
+                                    <li><a class="dropdown-item" href="#">Le plus ancient</a></li>
+                                    <li><a class="dropdown-item" href="#">A à Z</a></li>
+                                </ul>
+                            </div>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Recherchez un article"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+
+            <div class="row-8">
+                <div class="row">
+                    <!-- Article1 -->
+                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
+                        <img src="../Image/romelaere.jpg" alt="article-sortie1" class="miniature">
+                        <div class="ms-3">
+                            <h5>Les Etangs du Romelaëre</h5>
+                            <p>Situé dans l'Audomarois près de St-Omer (62), ces étangs sont un ancien site d'extraction de la tourbe. 
+                                3 sentiers sont disponibles si l'envie vous prend de vous promener au coeur de cette très belle nature !
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="btn-article rounded p-1 mx-3">2024</li>
+                                        <li class="btn-article rounded p-1 mx-3">Espaces naturels</li>
+                                    </ul>
+                                </div>
+                                <a href="article-romelaere.html" style="text-decoration: none;" class="btn-article rounded" id="suite">Lire la
+                                    suite</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article2 -->
+                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
+                        <img src="Image/" alt="article-sortie2" class="miniature">
+                        <div>
+                            <h5>A venir</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis porro quas maxime
+                                eaque
+                                voluptatum molestiae. Aliquid dignissimos illo dolorem tempore.</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="btn-article rounded p-1 mx-3">2024</li>
+                                        <li class="btn-article rounded p-1 mx-3">Espaces naturels</li>
+                                    </ul>
+                                </div>
+                                <a href="" style="text-decoration: none;" class="btn-article rounded" id="suite">Lire la
+                                    suite</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Article 3 -->
+                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
+                        <img src="../Image/" alt="article-sortie3" class="miniature">
+                        <div>
+                            <h5>A venir</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis porro quas maxime
+                                eaque
+                                voluptatum molestiae. Aliquid dignissimos illo dolorem tempore.</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="btn-article rounded p-1 mx-3">2024</li>
+                                        <li class="btn-article rounded p-1 mx-3">Espaces naturels</li>
+                                    </ul>
+                                </div>
+                                <a href="" style="text-decoration: none;" class="btn-article rounded" id="suite">Lire la
+                                    suite</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
+                        <img src="../Image/" alt="article-sortie4" class="miniature">
+                        <div>
+                            <h5>A venir</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis porro quas maxime
+                                eaque
+                                voluptatum molestiae. Aliquid dignissimos illo dolorem tempore.</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="btn-article rounded p-1 mx-3">2024</li>
+                                        <li class="btn-article rounded p-1 mx-3">Espaces naturels</li>
+                                    </ul>
+                                </div>
+                                <a href="" style="text-decoration: none;" class="btn-article rounded" id="suite">Lire la
+                                    suite</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row-1 d-flex justify-content-center align-items-center">
+                <a href="" class="page">Page 1</a>
+                <a href="" class="page">2</a>
+                <a href="" class="page">3</a>
+                <a href="" class="page">4</a>
+                <a href="" class="page">...</a>
+            </div>
+
+        </div>
+
+        <footer class=" d-flex justify-content-between mt-3" id="footer">
+            <div class=" d-flex justify-content-start">
+                <div><a href=""><i class="fa-brands fa-facebook fa-lg align-items-center" style="color: black;"
+                            id="fb"></i></a></div>
+                <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+                </div>
+            </div>
+            <a href="" id="mentions">Mentions légales et Crédits</a>
+            <a href="" id="plans">Plan du site</a>
+            <p>Par Pauline Drouvin - 2024</p>
+            <button class="rounded" id="btn-abonner"><a href="" id="abonner">Abonnez-vous !</a></button>
+        </footer>
+    </div>
+    <script src="../JavaScript/vulga.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+</html>
