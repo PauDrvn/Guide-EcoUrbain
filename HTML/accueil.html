@@ -43,7 +43,10 @@
                             <a class="nav-link active" href="sorties.html">Nos sorties</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="">Nos événements</a>
+                            <a class="nav-link active" href="event.html">Nos événements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Vos suggestions</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -78,7 +81,7 @@
         </div>
         <div class="container">
             <div class="row-7">
-                <div class="row" data-aos = "fade-right">
+                <div class="row" data-aos="fade-right">
 
                     <div class="col-8">
                         <h1>Je vous souhaite la bienvenue sur le Guide de l'EcoUrbain !</h1>
@@ -102,11 +105,11 @@
                         <img src="../Image/logo.png" alt="urbain1" id="logo-urbain">
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center align-items-center" data-aos="fade-left">
+                <div class="row d-flex justify-content-center align-items-center mt-5" data-aos="fade-left">
                     <div class="col-6"><img src="../Image/3421101.png" alt="logo-urbain2" id="logo-urbain2"></div>
                     <div class="col-6 justify-content-center align-items-center">
-                        <h2>Qu'est ce qu'un écosystème anthropique ?</h2>
-                        <p id="def" class="m-3">Un écosystème anthropique est un environnement influencé par
+                        <h2 class="ms-5">Qu'est ce qu'un écosystème anthropique ?</h2>
+                        <p id="def">Un écosystème anthropique est un environnement influencé par
                             l'activité
                             humaine (zones industrielles, villes, terres
                             agricoles, etc). Avec près de 55% de la population mondiale vivant dans des zones urbaines
@@ -124,16 +127,85 @@
                         </p>
                     </div>
                 </div>
-                <div class="row mt-5 mb-5 justify-content-between" id="mini-nav" data-aos="zoom-in">
-                    <h1 class="text-center m-5" id="titre-article"><i class="fa-solid fa-leaf fa-flip-horizontal" style="color: #1e7e5d;"></i>  Nos suggestions  <i class="fa-solid fa-leaf" style="color:#1e7e5d;"></i></h1>
-                    <div class="col rounded text-center me-3" id="mini-especes-accueil">
-                        <a href="" class="texte-mini">Découvrir les espèces</a></div>
-                    <div class="col rounded text-center me-3" id="mini-conseil-accueil">
-                        <a href="" class="texte-mini">Connaitre des astuces</a></div>
-                    <div class="col rounded text-center me-3" id="mini-sortie-accueil">
-                        <a href="" class="texte-mini">Explorez nos horizons</a></div>
-                    <div class="col rounded text-center" id="mini-event-accueil">
-                        <a href="" class="texte-mini">Engagez-vous</a></div>
+                <div data-aos="zoom-out">
+                    <h2 class="text-center m-5" id="titre-article"><i class="fa-solid fa-leaf fa-flip-horizontal"
+                            style="color: #1e7e5d;"></i> Nos suggestions <i class="fa-solid fa-leaf"
+                            style="color:#1e7e5d;"></i></h2>
+                    <div class="row" id="mini-nav" >
+
+                        <div class="col rounded text-center me-3" id="mini-especes-accueil">
+                            <a href="especes.html" class="texte-mini">Découvrir les espèces</a>
+                        </div>
+                        <div class="col rounded text-center me-3" id="mini-conseil-accueil">
+                            <a href="conseil.html" class="texte-mini">Connaitre des astuces</a>
+                        </div>
+                        <div class="col rounded text-center me-3" id="mini-sortie-accueil">
+                            <a href="sorties.html" class="texte-mini">Explorez nos horizons</a>
+                        </div>
+                        <div class="col rounded text-center" id="mini-event-accueil">
+                            <a href="" class="texte-mini">Engagez-vous</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in">
+                    <h2 class="text-center m-5" id="titre-article2"><i class="fa-solid fa-leaf fa-flip-horizontal"
+                            style="color: #1e7e5d;"></i> Intégrez la communauté <i class="fa-solid fa-leaf"
+                            style="color:#1e7e5d;"></i></h2>
+                    <div class="row" id="news">
+                        <div class="col-6" style="border-right: 0.5vh solid rgba(20, 102, 49, 0.5);">
+                            <h2 style="color: white;">Des avis ou des suggestions ?</h2>
+                            <p style="color: white; font-size: medium;">N'hésitez pas à m'envoyer un message ! Vous
+                                pouvez me partager vos idées, me poser des questions, ou simplement échanger sur les
+                                sujets qui vous intéressent. Vos avis et suggestions sont toujours les bienvenus ! Que
+                                ce soit pour discuter sur un article, donner un retour sur une sortie que vous avez
+                                effectué,
+                                ou partager des idées d'amélioration, je suis là pour vous écouter.
+                                Je vous invite donc à prendre contact et à partager vos pensées. Votre contribution est
+                                précieuse et contribuera à enrichir notre communauté.
+                            </p>
+                            <button id="btn-envoi" class="btn rounded"><a href="contact.html"
+                                    style="text-decoration: none; color: white;">Me contacter</a></button>
+                            <figure><img src="../Image/ideas.gif" alt="idees" id="idees"></figure>
+                        </div>
+                        <div class="col-6">
+                            <h2 style="color: white;">Abonnez-vous à notre newsletter !</h2>
+                            <p style="color: white; font-size: medium;">Vous souhaitez rester informé de la publication
+                                de nouveaux articles, des sorties et des événements à venir ? Abonnez-vous dès
+                                maintenant à notre newsletter pour recevoir directement dans votre boîte de réception
+                                toutes les informations
+                                importantes. Soyez parmi les premiers à découvrir nos articles, nos conseils et plus. Ne
+                                manquez plus
+                                aucune opportunité et rejoignez notre communauté dès aujourd'hui en vous abonnant à
+                                notre newsletter !</p>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3 fs-6">
+                                        <label for="nom" class="form-label">Nom</label>
+                                        <input type="text" class="form-control" id="nom" placeholder="Votre nom"
+                                            required>
+                                    </div>
+                                    <div class="mb-3 fs-6">
+                                        <label for="prenom" class="form-label">Prénom</label>
+                                        <input type="text" class="form-control" id="prenom" placeholder="Votre prénom"
+                                            required></input>
+                                    </div>
+                                    <div class="mb-3 fs-6">
+                                        <label for="mail" class="form-label">Adresse mail</label>
+                                        <input type="mail" class="form-control" id="mail"
+                                            placeholder="Votre adresse e-mail" required></input>
+                                    </div>
+                                    <button id="btn-news" class="btn rounded"><a href="contact.html"
+                                            style="text-decoration: none; color: white;">M'abonner</a></button>
+                                </div>
+                                <div class="col-6">
+                                    <figure><img src="../Image/news2.gif" alt="newsletter" width="100%"></figure>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -146,13 +218,14 @@
             </div>
             <a href="" id="mentions">Mentions légales et Crédits</a>
             <a href="" id="plans">Plan du site</a>
-            <p>Par Pauline Drouvin - 2024</p>
+            <a href="" id="contact">Contact</a>
             <button class="rounded" id="btn-abonner"><a href="" id="abonner">Abonnez-vous !</a></button>
         </footer>
     </div>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

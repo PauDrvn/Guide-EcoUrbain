@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Guide de l'EcoUrbain</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/vulga.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <div>
+                    <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="accueil.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="especes.html">Nos espèces</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="conseil.html">Nos conseils</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="sorties.html">Nos sorties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="event.html">Nos événements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Vos suggestions</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <div><a href=""><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a></div>
+                    <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;"
+                                id="insta"></i></a></div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6 mt-5">
+                <figure data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1500"><img src="../Image/contact.gif" alt="contact" style="width: 90%;"></figure>
+            </div>
+            <div class="col-6" data-aos="fade-in" data-aos-delay="1000" data-aos-duration="1500">
+                <div class="row mt-5 ms-5">
+                    <h1 style="font-size: 20px;">Des questions ? Des suggestions ou des envies ?</h1>
+                    <h2 style="font-size: 40px;">Contactez-nous !</h2>
+                    <div class="col mt-3">
+                        <input type="text" class="form-control shadow" placeholder="Prénom" aria-label="Prénom" id="prenom" style="border: 0.3vh solid #1e7e5d;">
+                    </div>
+                    <div class="col mt-3">
+                        <input type="text" class="form-control shadow" placeholder="Nom" aria-label="Nom" id="nom" style="border: 0.3vh solid #1e7e5d;">
+                    </div>
+                </div>
+                <input type="mail" class="form-control m-5 shadow" placeholder="Adresse mail" aria-label="mail" id="mail" style="border: 0.3vh solid #1e7e5d;">
+                <input type="text" class="form-control m-5 shadow" placeholder="Objet du message" aria-label="objet" style="border: 0.3vh solid #1e7e5d;">
+                <input type="text" class="form-control mt-5 ms-5 shadow" placeholder="Votre message ici..." aria-label="message" style="border: 0.3vh solid #1e7e5d; height: 200px;">
+                 <button class="btn rounded mt-3 ms-5 shadow" type="submit" id="btn-envoi">Envoyez!</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class=" d-flex justify-content-between mt-3" id="footer">
+        <div class=" d-flex justify-content-start">
+            <a href=""><i class="fa-brands fa-facebook fa-lg align-items-center" style="color: black;" id="fb"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+        </div>
+        <a href="" id="mentions">Mentions légales et Crédits</a>
+        <a href="" id="plans">Plan du site</a>
+        <a href="" id="contact">Contact</a>
+        <button class="rounded" id="btn-abonner"><a href="" id="abonner">Abonnez-vous !</a></button>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
