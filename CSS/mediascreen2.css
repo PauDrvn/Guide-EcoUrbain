@@ -373,7 +373,7 @@ object-fit: fill;
     display: none;
 }
 
-#description{
+#description, #evolution-menace, #illustration-perruche, #reglementations {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -452,20 +452,12 @@ margin-right: 10vh;
 #chant-photo{
 width: 70%;
 height: 60%;
-
 }
 
-#evolution-menace, #illustration-perruche, #reglementations{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align:center;
-}
-
-#evolution-menace .row-6{
-width: 100%;
+#evolution-menace .col-6{
+width: 100vh;
 margin-top: 4vh;
+
 }
 
 .illu{
