@@ -14,6 +14,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/vulga.css">
+    <link rel="stylesheet" href="../CSS/mediascreen2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
@@ -21,14 +22,24 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container-fluid">
-                <div>
-                    <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <div class="container-fluid">
+            <div id="logo-btn">
+                <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title" id="sidebarLabel">Menu - Guide de l'EcoUrbain</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="accueil.html">Accueil</a>
                         </li>
@@ -48,56 +59,66 @@
                             <a class="nav-link active" href="contact.html">Vos suggestions</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i
-                                class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                    <div><a href=""><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a></div>
-                    <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;"
-                                id="insta"></i></a></div>
                 </div>
             </div>
-        </nav>
-    </header>
+            <div class="d-flex align-items-center">
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search"
+                        id="searchbar">
+                    <button class="btn btn-outline-success" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <a href="" class="me-2"><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <div class="container-fluid">
         <div>
-            <img src="../Image/ban-vulcain.png" alt="ban-article" id="ban-article" class="image-transition">
+            <img src="../Image/ban-vulcain.png" alt="ban-article" id="ban-article" class="image-transition img-fluid">
         </div>
         <div class="container">
             <div class="row">
                 <!-- Titre -->
                 <div class="row-3">
-                    <h1 class="text-center m-5" id="titre-article">Le Vulcain</h1>
+                    <h1 class="text-center" id="titre-article">Le Vulcain</h1>
                 </div>
                 <!-- Exemple organisation article -->
-                <div class="row-3" data-aos="zoom-out">
+                <div class="row-3" data-aos="fade-in" id="description">
                     <h2>Sa description</h2>
                     <p>
                         Le Vulcain, ou <em>Vanessa atalanta</em> , porte son nom du dieu romain des forgerons. En effet,
-                        il est reconnaissable par <b>ailes noires à brun foncé barrées de rouge-orangé</b>des
-                         rappelant les flammes des forges. L’ apex des
+                        il est reconnaissable par <b>ailes noires à brun foncé barrées de rouge-orangé</b> des
+                        rappelant les flammes des forges. L’ apex des
                         ailes antérieures porte
-                        des <b>tâches blanches</b> et les ailes postérieures porte cette bande rougeoyante avec des tâches
+                        des <b>tâches blanches</b> et les ailes postérieures porte cette bande rougeoyante avec des
+                        tâches
                         noires. Sa chenille est
                         verruqueuse et épineuse, possède <b>un motif de marron à noire, avec des taches jaunes entre les
-                        pattes</b>. Ses soies ne sont
+                            pattes</b>. Ses soies ne sont
                         pas urticantes. <br></p>
-                    <p> Les adultes se nourrissent de <b>nectar</b> de chatons de saules, de fleurs de prunelliers au printemps
+                    <p> Les adultes se nourrissent de <b>nectar</b> de chatons de saules, de fleurs de prunelliers au
+                        printemps
                         mais également de
-                        fruits trop mûrs. Les chenilles se nourrissent quant à elle de leur <b>plante hôte</b>, l’ortie ou la
+                        fruits trop mûrs. Les chenilles se nourrissent quant à elle de leur <b>plante hôte</b>, l’ortie
+                        ou la
                         pariétaire. <br></p>
-                    <p> Le Vulcain est actif de <b>Mars à Octobre</b>. L’été, les mâles établissent leur territoire afin de
+                    <p> Le Vulcain est actif de <b>Mars à Octobre</b>. L’été, les mâles établissent leur territoire afin
+                        de
                         retrouver leur femelle en
                         début de soirée. On peut les voir se pourchasser les uns les autres. Après la reproduction, les
                         œufs sont déposés sur
                         leur plante hôte. Notons qu’ils sont parfaitement camouflés ! Les jeunes chenilles, plutôt
                         solitaires, se construisent
-                        <b>un nid avec des feuilles réunies à la soie</b>. Quand la nourriture manque, elles se déplacent. On
+                        <b>un nid avec des feuilles réunies à la soie</b>. Quand la nourriture manque, elles se
+                        déplacent. On
                         retrouvera la chrysalide
-                        au le dernier abri larvaire. <br></p>
-                    <p> Le cycle possède <b>plusieurs générations</b> par an : La génération observable en avril sont issus de
+                        au le dernier abri larvaire. <br>
+                    </p>
+                    <p> Le cycle possède <b>plusieurs générations</b> par an : La génération observable en avril sont
+                        issus de
                         populations
                         méditerranéennes....et que l'automne venu, leurs descendants entament leur migration vers le Sud
                         et font souvent le
@@ -106,62 +127,69 @@
 
 
                 </div>
-                <div class="row-3" data-aos="zoom-out">
+                <div class="row-3" data-aos="fade-in">
                     <div class="row mt-5 rounded" id="identification2">
-                        <div class="col-6">
+                        <div class="col-9">
                             <h2>Où et comment le trouver ?</h2>
                             <p>
-                                <b>Il peut se retrouver un peu partout ! Il aime particulièrement les zones humides mais on
-                                le rencontre facilement près
-                                des cours d’eau, des étangs, des champs et même les parcs. Il se reconnaît à son vol
-                                rapide et plutôt aléatoire. <br>
-                                Dès le Printemps, retrouvez-le donc sur les plantes mellifères dont l'Atalante, son autre nom, se
-                                délecte ! Il se peut néanmoins qu'il soit entrain de se prélasser au soleil !</b> <br>
+                                Il peut se retrouver un peu partout ! Il aime particulièrement les zones humides mais
+                                    on
+                                    le rencontre facilement près
+                                    des cours d’eau, des étangs, des champs et même les parcs. Il se reconnaît à son vol
+                                    rapide et plutôt aléatoire. <br>
+                                    Dès le Printemps, retrouvez-le donc sur les plantes mellifères dont l'Atalante, son
+                                    autre nom, se
+                                    délecte ! Il se peut néanmoins qu'il soit entrain de se prélasser au soleil !
+                                <br>
 
                             </p>
                         </div>
 
-                        <div class="col-6">
-                            <figure><img src="../Image/vulcain2.JPG" alt="vulcain2" class="rounded-circle"
-                                    id="mini-photo" style="margin-left: 40vh;"></figure>
+                        <div class="col-3">
+                            <figure><img src="../Image/vulcain2.JPG" alt="vulcain2" class="rounded-circle img-fluid"
+                                    id="chant-photo"></figure>
 
                         </div>
                     </div>
                 </div>
                 <div class="row-3">
-                    <div class="row mt-5" data-aos="zoom-out">
+                    <div class="row mt-5" data-aos="fade-in" id="evolution-menace">
                         <div class="col-6">
                             <h2>Son évolution et ses menaces</h2>
                             <p>En France, son statut établi par la Liste Rouge des papillons de jour de 2012 est
                                 <b>« préoccupation mineure »</b>. Il est
                                 également inscrit à ce niveau de préoccupation par celle du Nord-Pas-de-Calais en 2014.
-                                Il a été remarqué que la migration du papillon a changé. <b>Avec le changement climatique,
-                                celui-ci peut arriver à survivre
-                                aux hivers non-méditerranéens.</b></p>
+                                Il a été remarqué que la migration du papillon a changé. <b>Avec le changement
+                                    climatique,
+                                    celui-ci peut arriver à survivre
+                                    aux hivers non-méditerranéens.</b>
+                            </p>
                             <p> Ses différentes menaces peuvent être <b>l'urbanisation, l'artificialisation des sols et
-                                l'utilisation de produits phytosanitaires.</b>
+                                    l'utilisation de produits phytosanitaires.</b>
                                 Les insecticides ont un impact direct sur eux mais n'oublions pas l'impact des
                                 herbicides ! Le désherbage des espèces végétales dites "indésirables" comme l'ortie dans
                                 les villes ou ailleurs
                                 influence énormement le Vulcain qui dépend de ces plantes.</p>
 
 
-                            <figure><img src="../Image/chrysalide-vulcain.jpg" alt="vulcain-chrysalide" class="illu"
-                                    class="mt-3"></figure>
+                            <figure><img src="../Image/chrysalide-vulcain.jpg" alt="vulcain-chrysalide"
+                                    class="illu mt-3 img-fluid"></figure>
                         </div>
                         <div class="col-6">
                             <h2>Ses protections</h2>
                             <p> Le Vulcain est réglementé de manière régionale au titre de <b>l’arrêté du 28 Juin 2021
-                                relatif à la prévention de
-                                l’introduction et de la propagation des espèces animales exotiques envahissantes sur la
-                                territoire de la Réunion.</b> Il est
+                                    relatif à la prévention de
+                                    l’introduction et de la propagation des espèces animales exotiques envahissantes sur
+                                    la
+                                    territoire de la Réunion.</b> Il est
                                 donc interdit de l’introduire sur le territoire, y compris par le transit sous
                                 surveillance douanière, également dans le
                                 milieu naturel. La détention, le transport, le colportage, l'utilisation, l'échange, la
                                 mise en vente et la vente ou
                                 l'achat de spécimens vivants est aussi interdite. <br>
                                 A part cela, il n'a <b>pas de protection particulière...</b> </p>
-                                <figure><img src="../Image/vanessa_atalanta_caterpillar-8-.jpg" alt="chenille-abri" id="illu2"></figure>
+                            <figure><img src="../Image/vanessa_atalanta_caterpillar-8-.jpg" alt="chenille-abri"
+                                    class="illu2 img-fluid"></figure>
 
                         </div>
 
@@ -170,13 +198,14 @@
             </div>
         </div>
         <div id="source" class="rounded">
-            <h6 class="m-3">Sources et liens utiles</h6>
+            <h6>Sources et liens utiles</h6>
             <ul style="list-style: none;">
                 <li>Photos : Wirestock : Pinimg.com - Forum-bretagne-vivante.org - Lepinet.net - Flickr : Jean-François
                     Bonachera - Fleetingwonders.com</li>
                 <li><a href="https://inpn.mnhn.fr/espece/cd_nom/4001">INPN</a></li>
                 <li><a href="https://www.papillons.info/papillon-vulcain/">Papillons.info</a></li>
-                <li><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043868035 ">Arrêté du 28 Juin 2021</a></li>
+                <li><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043868035 ">Arrêté du 28 Juin 2021</a>
+                </li>
             </ul>
         </div>
 

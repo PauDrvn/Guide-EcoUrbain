@@ -14,6 +14,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/vulga.css">
+    <link rel="stylesheet" href="../CSS/mediascreen2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
@@ -21,14 +22,24 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container-fluid">
-                <div>
-                    <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <div class="container-fluid">
+            <div id="logo-btn">
+                <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title" id="sidebarLabel">Menu - Guide de l'EcoUrbain</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="accueil.html">Accueil</a>
                         </li>
@@ -48,31 +59,35 @@
                             <a class="nav-link active" href="contact.html">Vos suggestions</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i
-                                class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                    <div><a href=""><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a></div>
-                    <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;"
-                                id="insta"></i></a></div>
                 </div>
             </div>
-        </nav>
-    </header>
+            <div class="d-flex align-items-center">
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search"
+                        id="searchbar">
+                    <button class="btn btn-outline-success" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <a href="" class="me-2"><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <div class="container-fluid">
         <div>
-            <img src="../Image/ban-perruchecollier.png" alt="ban-article" id="ban-article" class="image-transition">
+            <img src="../Image/ban-perruchecollier.png" alt="ban-article" id="ban-article"
+                class="image-transition img-fluid">
         </div>
         <div class="container">
             <div class="row">
                 <!-- Titre -->
                 <div class="row-3">
-                    <h1 class="text-center m-5" id="titre-article">La Perruche à Collier</h1>
+                    <h1 class="text-center" id="titre-article">La Perruche à Collier</h1>
                 </div>
                 <!-- Exemple organisation article -->
-                <div class="row-3" data-aos="zoom-out">
+                <div class="row-3" data-aos="fade-in" id="description">
                     <h2>Sa description</h2>
                     <p>
                         La Perruche à collier, <i>Psittacula krameri</i>, un oiseau d’une quarantaine de centimètre. Son
@@ -110,11 +125,11 @@
                 </div>
 
                 <div class="row-3">
-                    <div class="row mt-5 rounded" id="identification" data-aos="zoom-out">
-                        <div class="col-8">
+                    <div class="row mt-5 rounded" id="identification" data-aos="fade-in">
+                        <div class="col-9">
                             <h2>Où et comment la trouver ?</h2>
                             <p>
-                                Vous pouvez l’observer dans<b>les jardins et parcs urbains</b>. Elle vit en colonies et
+                                Vous pouvez l’observer dans <b>les jardins et parcs urbains</b>. Elle vit en colonies et
                                 se
                                 repère facilement par ses cris
                                 stridents ! En effet, <b>c’est une espèce grégaire dont les mâles vont se scinder pour
@@ -130,154 +145,192 @@
                             </p>
                         </div>
 
-                        <div class="col-4">
-                            <img src="../Image/perruche2.jpg" alt="rougegorge" class="rounded-circle" id="chant-photo"
-                                style="margin-left: 18vh;">
+                        <div class="col-3">
+                            <img src="../Image/perruche2.jpg" alt="rougegorge" class="rounded-circle img-fluid"
+                                id="chant-photo">
                             <audio id="chant-oiseaux">
                                 <source src="../Audio/MNHN-SO-2021-1240.mp3" type="audio/mp3">
                         </div>
                     </div>
                 </div>
-                <div class="row-3">
-                    <div class="col mt-5" data-aos="zoom-out">
-                        <h2>Son évolution et ses impacts</h2>
-                        <p>
-                            En France, son statut n’est pas établi par la Liste Rouge car celle-ci est <b>une espèce
-                                introduite </b>dans une période
-                            récente. Il va de même pour la liste du Nord-Pas-de-Calais en 2017. Elle n’est pas menacée
-                            car elle s’est bien adaptée
-                            dans les régions où elle a été introduite. Elle est même assez abondante grâce à son
-                            adaptabilité face à l’Homme. Elle a
-                            même plutôt mauvaise réputation auprès des écologues. Plusieurs questions ont été
-                            soulevées :
-                        </p>
 
-                        <p id="questions" class="rounded-pill text-center"><b>Va-t-elle concurrencer les espèces
-                                indigènes pour la reproduction ou les sources de nourriture ? <br>
-                                Peut-elle se comporter en prédateur d’espèces locales ? <br>
-                                Transporte-elle des micro-organismes pathogènes pour la faune ou l’espèce humaine ?</b>
-                        </p>
-                        <p>Clergeau et al. (2009) a démontré <b>qu’elle se nourrissait particulièrement d’espèces
-                                exotiques</b> comme le Marronnier
-                            d’Inde ou le Robinier, peu consommés par les espèces locales, <b>mais aussi d'espèces
-                                végétales locales</b>. Une étude du MNHN et de l’Agro Paris a montré que, bien
-                            que <b>les espèces les plus petites sont écartées sur le moment</b>, de manière générale,
-                            <b>la diversité aux mangeoires urbains
-                                n’est pas affectée par sa présence.</b> Pour les pathogènes, son étude de 2014 <b>n’a
-                                pas apporté de preuves sur l’arrivée de
-                                micro-organismes nouveaux.</b></p>
-                        <p>Quant aux sites de nidifications, des études de Strubbe et Matthyssen (2009) faites en
-                            Belgique ont montré que <b>dans le
-                                cas d’une réduction importante de la disponibilité des sites, la Sitelle, elle aussi
-                                cavernicole, souffrait de la
-                                présence de la Perruche à Collier.</b> Cela reste à prendre avec des pincettes que cela
-                            reste une <b>situation peu probable
-                                dans la nature</b>. Et pour cause, la population notre sujet a cessé de croitre en
-                            Flandres et Wallonie. Il a été aussi
-                            montré par Paquet et Weiserbs (2020) que <b>les espèces cavernicoles locales n’a pas l’air
-                                d’avoir subi de conséquences de
-                                l’accroissement de la population de <i>Psittacula krameri</i></b>.</p>
-                        <div class="d-flex column justify-content-center">
-                            <col-6>
-                                <figure><img src="../Image/perruche-nourrissage.jpg" alt="perruche-nourrissage"
-                                        class="illu-perruche m-5"></figure>
-                            </col-6>
-                            <col-6>
-                                <figure><img src="../Image/bird-6806738_1280.jpg" alt="perruche-mangeoire"
-                                        class="illu-perruche m-5"></figure>
-                            </col-6>
+                <div class="row-3">
+                    <div class="row" id="evolution-menace">
+                        <div class="row mt-5" data-aos="fade-in">
+                            <h2>Son évolution et ses impacts</h2>
+                            <p>
+                                En France, son statut n’est pas établi par la Liste Rouge car celle-ci est <b>une espèce
+                                    introduite </b>dans une période
+                                récente. Il va de même pour la liste du Nord-Pas-de-Calais en 2017. Elle n’est pas
+                                menacée
+                                car elle s’est bien adaptée
+                                dans les régions où elle a été introduite. Elle est même assez abondante grâce à son
+                                adaptabilité face à l’Homme. Elle a
+                                même plutôt mauvaise réputation auprès des écologues. Plusieurs questions ont été
+                                soulevées :
+                            </p>
+
+                            <p id="questions" class="rounded-pill text-center mt-3 mb-4"><b>Va-t-elle concurrencer les espèces
+                                    indigènes pour la reproduction ou les sources de nourriture ? <br>
+                                    Peut-elle se comporter en prédateur d’espèces locales ? <br>
+                                    Transporte-elle des micro-organismes pathogènes pour la faune ou l’espèce
+                                    humaine ?</b>
+                            </p>
+                            <p>Clergeau et al. (2009) a démontré <b>qu’elle se nourrissait particulièrement d’espèces
+                                    exotiques</b> comme le Marronnier
+                                d’Inde ou le Robinier, peu consommés par les espèces locales, <b>mais aussi d'espèces
+                                    végétales locales</b>. Une étude du MNHN et de l’Agro Paris a montré que, bien
+                                que <b>les espèces les plus petites sont écartées sur le moment</b>, de manière
+                                générale,
+                                <b>la diversité aux mangeoires urbains
+                                    n’est pas affectée par sa présence.</b> Pour les pathogènes, son étude de 2014
+                                <b>n’a
+                                    pas apporté de preuves sur l’arrivée de
+                                    micro-organismes nouveaux.</b>
+                            </p>
+                            <p>Quant aux sites de nidifications, des études de Strubbe et Matthyssen (2009) faites en
+                                Belgique ont montré que <b>dans le
+                                    cas d’une réduction importante de la disponibilité des sites, la Sitelle, elle aussi
+                                    cavernicole, souffrait de la
+                                    présence de la Perruche à Collier.</b> Cela reste à prendre avec des pincettes que
+                                cela
+                                reste une <b>situation peu probable
+                                    dans la nature</b>. Et pour cause, la population notre sujet a cessé de croitre en
+                                Flandres et Wallonie. Il a été aussi
+                                montré par Paquet et Weiserbs (2020) que <b>les espèces cavernicoles locales n’a pas
+                                    l’air
+                                    d’avoir subi de conséquences de
+                                    l’accroissement de la population de <i>Psittacula krameri</i></b>.</p>
+                            <div class="d-flex column" id="illustration-perruche">
+                                <col-6>
+                                    <figure><img src="../Image/perruche-nourrissage.jpg" alt="perruche-nourrissage"
+                                            class="illu-perruche img-fluid"></figure>
+                                </col-6>
+                                <col-6>
+                                    <figure><img src="../Image/bird-6806738_1280.jpg" alt="perruche-mangeoire"
+                                            class="illu-perruche img-fluid"></figure>
+                                </col-6>
+                            </div>
+
+                            <p id="reponses" class="rounded-pill text-center"><b>En résumé, contrairement aux
+                                    inquiétudes
+                                    que les scientifiques peuvent avoir concernant l'impact sur notre biodiversité
+                                    locale,
+                                    il n’y a pas l’air d’avoir de risques. Bien sur, cela
+                                    peut varier d’une agglomération à une autre. Par prévention, des mesures peuvent
+                                    être
+                                    prises. Elles peuvent néanmoins être en effet source de nuisance sonore et visuelle
+                                    (bruits, fiente), faire des dégâts aux cultures. Elles peuvent être vecteur de
+                                    psittacose, transmissible aux oiseaux et à l’Homme.</b></p>
                         </div>
 
-                        <p id="reponses" class="rounded-pill text-center"><b>En résumé, contrairement aux inquiétudes
-                                que les scientifiques peuvent avoir concernant l'impact sur notre biodiversité locale,
-                                il n’y a pas l’air d’avoir de risques. Bien sur, cela
-                                peut varier d’une agglomération à une autre. Par prévention, des mesures peuvent être
-                                prises. Elles peuvent néanmoins être en effet source de nuisance sonore et visuelle
-                                (bruits, fiente), faire des dégâts aux cultures. Elles peuvent être vecteur de
-                                psittacose, transmissible aux oiseaux et à l’Homme.</b></p>
+                        <div class="row mt-5" data-aos="fade-in" id="reglementations">
+                            <h2>Ses réglementations</h2>
+                            <div class="table-responsive">
+                                <table class="table table-bordered border-dark">
+                                    <tr>
+                                        <th class="table-success border-dark">Réglementations</th>
+                                        <th class="table-success border-dark">Définitions</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Convention européenne de Berne</td>
+                                        <td>Assure des protections de la flore et la faune sauvage en particulier lors
+                                            de
+                                            l'élaboration de la politique nationale
+                                            d'aménagement et de développement, ainsi que dans la lutte contre la
+                                            pollution.
+                                            Les Parties encouragent aussi l'éducation et la diffusion d'informations
+                                            générales concernant la nécessité de conserver
+                                            le patrimoine naturel sauvage.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Convention de Washington</td>
+                                        <td>
+                                            Garantit que le commerce international des animaux et des plantes inscrits
+                                            dans
+                                            ses
+                                            Annexes, vivants ou morts, ainsi que
+                                            de leurs parties et de leurs produits dérivés ne nuise pas à la conservation
+                                            de
+                                            la
+                                            biodiversité et repose sur une
+                                            utilisation durable des espèces sauvages.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Arrêté du 14 Février 2018</td>
+                                        <td>
+                                            Est interdite sur tout le territoire métropolitain et en tout temps
+                                            l'introduction
+                                            dans le milieu naturel, qu'elle soit
+                                            volontaire, par négligence, ou par imprudence, des spécimens vivants des
+                                            espèces
+                                            animales concernées.
+                                            Sont interdits sur tout le territoire métropolitain et en tout temps
+                                            l'introduction
+                                            sur le territoire, y compris le
+                                            transit sous surveillance douanière, l'introduction dans le milieu naturel,
+                                            la
+                                            détention, le transport, le colportage,
+                                            l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens
+                                            vivants
+                                            des espèces animales concernées.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Arrêté du 28 Novembre 2019</td>
+                                        <td>
+                                            Sont interdits sur tout le territoire de la Guyane et en tout temps
+                                            l'introduction
+                                            sur le territoire, y compris le
+                                            transit sous surveillance douanière, l'introduction dans le milieu naturel,
+                                            la
+                                            détention, le transport, le colportage,
+                                            l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens
+                                            vivants
+                                            des espèces animales concernées.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Arrêté du 31 Décembre 2019</td>
+                                        <td>
+                                            Sont interdits sur tout le territoire de Mayotte et en tout temps
+                                            l'introduction
+                                            sur
+                                            le territoire, y compris le transit
+                                            sous surveillance douanière, l'introduction dans le milieu naturel, la
+                                            détention, le
+                                            transport, le colportage,
+                                            l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens
+                                            vivants
+                                            des espèces animales concernées.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Arrêté du 28 Juin 2021</td>
+                                        <td>
+                                            Sont interdits sur tout le territoire de La Réunion et en tout temps
+                                            l'introduction
+                                            sur le territoire, y compris le
+                                            transit sous surveillance douanière, l'introduction dans le milieu naturel,
+                                            la
+                                            détention, le transport, le colportage,
+                                            l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens
+                                            vivants
+                                            des espèces animales concernées.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col mt-5" data-aos="zoom-out">
-                        <h2>Ses réglementations</h2>
-                        <table class="table table-bordered border-dark">
-                            <tr>
-                                <th class="table-success border-dark">Réglementations</th>
-                                <th class="table-success border-dark">Définitions</th>
-                            </tr>
-                            <tr>
-                                <td class="table-success border-dark">Convention européenne de Berne</td>
-                                <td>Assure des protections de la flore et la faune sauvage en particulier lors de
-                                    l'élaboration de la politique nationale
-                                    d'aménagement et de développement, ainsi que dans la lutte contre la pollution.
-                                    Les Parties encouragent aussi l'éducation et la diffusion d'informations
-                                    générales concernant la nécessité de conserver
-                                    le patrimoine naturel sauvage.</td>
-                            </tr>
-                            <tr>
-                                <td class="table-success border-dark">Convention de Washington</td>
-                                <td>
-                                    Garantit que le commerce international des animaux et des plantes inscrits dans ses
-                                    Annexes, vivants ou morts, ainsi que
-                                    de leurs parties et de leurs produits dérivés ne nuise pas à la conservation de la
-                                    biodiversité et repose sur une
-                                    utilisation durable des espèces sauvages.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-success border-dark">Arrêté du 14 Février 2018</td>
-                                <td>
-                                    Est interdite sur tout le territoire métropolitain et en tout temps l'introduction
-                                    dans le milieu naturel, qu'elle soit
-                                    volontaire, par négligence, ou par imprudence, des spécimens vivants des espèces
-                                    animales concernées.
-                                    Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction
-                                    sur le territoire, y compris le
-                                    transit sous surveillance douanière, l'introduction dans le milieu naturel, la
-                                    détention, le transport, le colportage,
-                                    l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens vivants
-                                    des espèces animales concernées.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-success border-dark">Arrêté du 28 Novembre 2019</td>
-                                <td>
-                                    Sont interdits sur tout le territoire de la Guyane et en tout temps l'introduction
-                                    sur le territoire, y compris le
-                                    transit sous surveillance douanière, l'introduction dans le milieu naturel, la
-                                    détention, le transport, le colportage,
-                                    l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens vivants
-                                    des espèces animales concernées.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-success border-dark">Arrêté du 31 Décembre 2019</td>
-                                <td>
-                                    Sont interdits sur tout le territoire de Mayotte et en tout temps l'introduction sur
-                                    le territoire, y compris le transit
-                                    sous surveillance douanière, l'introduction dans le milieu naturel, la détention, le
-                                    transport, le colportage,
-                                    l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens vivants
-                                    des espèces animales concernées.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-success border-dark">Arrêté du 28 Juin 2021</td>
-                                <td>
-                                    Sont interdits sur tout le territoire de La Réunion et en tout temps l'introduction
-                                    sur le territoire, y compris le
-                                    transit sous surveillance douanière, l'introduction dans le milieu naturel, la
-                                    détention, le transport, le colportage,
-                                    l'utilisation, l'échange, la mise en vente, la vente ou l'achat de spécimens vivants
-                                    des espèces animales concernées.
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+
                 </div>
             </div>
         </div>
         <div id="source" class="rounded">
-            <h6 class="m-3">Sources et liens utiles</h6>
+            <h6>Sources et liens utiles</h6>
             <ul style="list-style: none;">
                 <li>Photos : Flickr : Franck Vassen – Pexels : BinoyBucky & Mark A. Jenkins - Pixabay : GAIMARD -
                     Oiseaux.net</li>
@@ -314,7 +367,7 @@
             <a href="" id="mentions">Mentions légales et Crédits</a>
             <a href="" id="plans">Plan du site</a>
             <a href="" id="contact">Contact</a>
-            
+
             <button class="rounded" id="btn-abonner"><a href="" id="abonner">Abonnez-vous !</a></button>
         </footer>
 

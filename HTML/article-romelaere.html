@@ -2,34 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les étangs du Romelaëre - Guide de l'EcoUrbain</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../CSS/vulga.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../CSS/vulga.css" />
+    <link rel="stylesheet" href="../CSS/mediascreen2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container-fluid">
-                <div>
-                    <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <div class="container-fluid">
+            <div id="logo-btn">
+                <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title" id="sidebarLabel">Menu - Guide de l'EcoUrbain</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="accueil.html">Accueil</a>
                         </li>
@@ -49,189 +59,266 @@
                             <a class="nav-link active" href="contact.html">Vos suggestions</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i
-                                class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                    <div><a href=""><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a></div>
-                    <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;"
-                                id="insta"></i></a></div>
                 </div>
             </div>
-        </nav>
-    </header>
+            <div class="d-flex align-items-center">
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search"
+                        id="searchbar">
+                    <button class="btn btn-outline-success" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <a href="" class="me-2"><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <div class="container-fluid">
         <div>
             <video autoplay loop muted id="ban-milieu">
-                <source src="../Video/Romeleare.mp4" type="video/mp4">
+                <source src="../Video/Romelaere.mp4" type="video/mp4" />
             </video>
         </div>
         <div class="container">
             <div class="row">
                 <!-- Titre -->
-                <div class="row-3">
-                    <h1 class="text-end m-5" id="titre-article-milieu"><i class="fa-solid fa-location-dot"
-                            style="color: #64795a;"></i> Les Etangs du Romelaëre <br> St-Omer (62) & Nieurlet (59)
+                <div class="row">
+                    <h1 id="titre-article-milieu">
+                        <i class="fa-solid fa-location-dot" style="color: #64795a"></i>
+                        Les Etangs du Romelaëre <br>
+                        St-Omer (62) & Nieurlet (59)
                     </h1>
                 </div>
                 <!-- Exemple organisation article -->
-                <div class="row-3 mt-5 text-center" data-aos="zoom-in" data-aos-duration="800" id="description-milieu">
-                    <div class="row">
+                <div class="row mt-5 text-center" data-aos="fade-in" data-aos-duration="800">
+                    <div class="row shadow" id="description-milieu">
                         <div class="col-6">
                             <h2>Son histoire</h2>
-                            <p>Située dans <b>l' Audomarois</b> dans le bassin de l'Aa, près de St-Omer, la réserve
-                                naturelle
-                                des Etangs du Romelaëre est un <b>ancien site d'extraction de la tourbe devenu zone
-                                    humide</b>. En
-                                effet, elle était une zone d'exploitation de tourbes alcalines au Moyen-Age.
-                                D'abord classée en "réserve naturelle volontaire" par le Parc Naturel Régional
-                                Audomarois,
-                                elle fait partie désormais du <b>Parc Naturel Régional des Caps et Marais d'Opale</b>.
-                                Ces étangs forment un <b>complexe de différents paysages</b> comme des rivières, des
-                                watergangs, de
-                                prairies, des zones de cultures, etc.
-                                Cette réserve est grande d'une centaine d'hectares.
+                            <p>
+                                Située dans <b>l'Audomarois</b> dans le bassin de l'Aa, près
+                                de St-Omer, la réserve naturelle des Etangs du Romelaëre est
+                                un
+                                <b>ancien site d'extraction de la tourbe devenu zone humide</b>. En effet, elle était
+                                une zone d'exploitation de tourbes
+                                alcalines au Moyen-Age. D'abord classée en "réserve naturelle
+                                volontaire" par le Parc Naturel Régional Audomarois, elle fait
+                                partie désormais du
+                                <b>Parc Naturel Régional des Caps et Marais d'Opale</b>. Ces
+                                étangs forment un <b>complexe de différents paysages</b> comme
+                                des rivières, des watergangs, de prairies, des zones de
+                                cultures, etc. Cette réserve est grande d'une centaine
+                                d'hectares.
                             </p>
                         </div>
                         <div class="col-6">
                             <h2>Sa faune et sa flore</h2>
-                            <p>Ces étendues d'eau, prairies et bois tourbeux acceuillent une grande biodiversité<b>
-                                    comme
-                                    de
-                                    nombreux oiseaux</b> : héron cendré, butor étoilé ou busard des roseaux. Nous
-                                pouvons
-                                également
-                                y trouver
-                                plus de 200 couples de Grands Cormorans nicheurs.
-                                On peut également y croiser des <b>libellules et des poissons</b>. La flore n'a rien a
-                                envié à
-                                la
-                                faune. <b>Les herbiers sont très riches avec nénuphars, utriculaires ou le faux aloé.
-                                    Notons que certaines sont protégées et/ou d'intérêt patrimoniale !</b>
+                            <p>
+                                Ces étendues d'eau, prairies et bois tourbeux acceuillent une
+                                grande biodiversité<b> comme de nombreux oiseaux</b> : héron
+                                cendré, butor étoilé ou busard des roseaux. Nous pouvons
+                                également y trouver plus de 200 couples de Grands Cormorans
+                                nicheurs. On peut également y croiser des
+                                <b>libellules et des poissons</b>. La flore n'a rien a envié à
+                                la faune.
+                                <b>Les herbiers sont très riches avec nénuphars, utriculaires
+                                    ou le faux aloé. Notons que certaines sont protégées et/ou
+                                    d'intérêt patrimoniale !</b>
                             </p>
                         </div>
-
                     </div>
-
                 </div>
-                <div class="text-center mt-5" data-aos="zoom-in" data-aos-duration="800">
-                    <h2>Quelques photos...</h2>
-                    <p>A venir</p>
+                <div class="row text-center mt-5" data-aos="fade-in" data-aos-duration="800" id="photos">
+                    <div class="col">
+                        <h2>Quelques photos...</h2>
+                        <p>A venir</p>
+                    </div>
                 </div>
 
-                <div class="row-3 mt-5" data-aos="zoom-in" data-aos-duration="800">
+                <div class="row mt-5 text-center" data-aos="fade-in" data-aos-duration="800"
+                    id="evolution-menace-milieu">
                     <div class="row">
-                        <div class="col-6 mt-5">
-
-                            <table class="table table-bordered border-dark" id="table-protection">
-                                <tr>
-                                    <th class="table-success border-dark">Protections</th>
-                                    <th class="table-success border-dark">Définitions</th>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Parc Naturel Régional</td>
-                                    <td>C'est un territoire ayant choisi volontairement un mode de développement fondé sur la mise en valeur et la protection de
-                                    patrimoines naturels et culturels considérés comme riches et fragiles. Ils sont créés par décision du Conseil Régional et gérés par des syndicats mixtes de collectivités territoriales.</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Réserve de Biosphère</td>
-                                    <td>C'est un territoire reconnu par l'UNESCO conciliant la conservation de la biodiversité et le développement durable, avec
-                                    l'appui de la recherche, de l'éducation et de la sensibilisation, dans le cadre du programme sur l'homme et la biosphère.</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Réserve Naturelle Nationale</td>
-                                    <td>C'est une aire protégée faisant partie des réserves naturelles de France et dont le statut est défini par la loi relative
-                                    à la démocratie de proximité du 27 février 2002. C'est un outil de protection à long terme d'espaces, d'espèces ou
-                                    d'objets géologiques. La durée de sa protection est illimitée.</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Site Natura 2000</td>
-                                    <td>Le réseau rassemble des sites naturels ou semi-naturels de l'Union européenne ayant une grande valeur
-                                    patrimoniale, par la faune et la flore exceptionnelles qu'ils contiennent.
-                                    L'objectif est de maintenir la diversité biologique des milieux, tout en tenant
-                                    compte des exigences économiques, sociales, culturelles et régionales dans une logique de développement durable.</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">ZNIEFF I</td>
-                                    <td>Ceux sont des espaces homogènes écologiquement, définis par la présence d'espèces, d'associations d'espèces ou d'habitats rares,
-                                    remarquables ou caractéristiques du patrimoine naturel régional. Ce sont les zones les plus remarquables du territoire.</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">ZNIEFF II</td>
-                                    <td>Ceux sont des espaces qui intègrent des ensembles naturels fonctionnels et paysagers, possédant une cohésion élevée et plus riches que
-                                    les milieux alentours.</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Convention RAMSAR</td>
-                                    <td>C'est un traité international pour la conservation et le développement durable des zones humides,
-                                    qui vise à enrayer leur dégradation ou disparition, aujourd'hui et demain, en reconnaissant leurs fonctions écologiques
-                                    ainsi que leur valeur économique, culturelle, scientifique et récréative.</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-6">
+                        <div class="row-6 ms-2">
                             <h2>Ses protections</h2>
-                            <iframe width="600" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                                 sandbox="allow-forms allow-scripts allow-same-origin"
                                 src="https://www.geoportail.gouv.fr/embed/visu.html?c=2.2824764581224186,50.77589290414025&z=13&l0=World_Topo_Map::GEOPORTAIL:OGC:WMTS(1)&l1=PROTECTEDAREAS.PNR::GEOPORTAIL:OGC:WMTS(1)&l2=PROTECTEDAREAS.BIOS::GEOPORTAIL:OGC:WMTS(0.6;h)&l3=PROTECTEDAREAS.ZPS::GEOPORTAIL:OGC:WMTS(1;h)&l4=PROTECTEDAREAS.ZNIEFF1::GEOPORTAIL:OGC:WMTS(0.6;h)&l5=PROTECTEDAREAS.ZNIEFF2::GEOPORTAIL:OGC:WMTS(1;h)&l6=PROTECTEDAREAS.RAMSAR::GEOPORTAIL:OGC:WMTS(1)&l7=PROTECTEDAREAS.RN::GEOPORTAIL:OGC:WMTS(1)&permalink=yes"
-                                allowfullscreen></iframe>
-                         
-                                <p class="mt-5 ms-3">La carte illustre l'étendue du Parc Naturel Régional en vert clair: c'est le parc du Caps et Marais d'Opale ! Les Etangs du Romelaëre sont représentés en vert foncé avec son statut de Réserve Naturelle Nationale. 
-                                    La surface bleue indique toute la zone protégée par la Convention Ramsar. Les autres protections ne sont pas indiquées sur cette carte mais vous pouvez les retrouver sur le site de 
-                                    <a style="text-decoration: none;" href="https://www.geoportail.gouv.fr/carte?c=2.1033147448853424,50.87745591224123&z=10&l0=World_Topo_Map::GEOPORTAIL:OGC:WMTS(1)&l1=PROTECTEDAREAS.PNR::GEOPORTAIL:OGC:WMTS(1)&l2=PROTECTEDAREAS.BIOS::GEOPORTAIL:OGC:WMTS(0.6)&l3=PROTECTEDAREAS.ZPS::GEOPORTAIL:OGC:WMTS(1)&l4=PROTECTEDAREAS.ZNIEFF1::GEOPORTAIL:OGC:WMTS(0.6)&l5=PROTECTEDAREAS.ZNIEFF2::GEOPORTAIL:OGC:WMTS(1)&l6=PROTECTEDAREAS.RAMSAR::GEOPORTAIL:OGC:WMTS(1)&l7=PROTECTEDAREAS.RN::GEOPORTAIL:OGC:WMTS(1)&permalink=yes">Géoportail</a>. </p>
+                                allowfullscreen class="carte"></iframe>
+
+                            <p class="mt-3 mb-5">
+                                La carte illustre l'étendue du Parc Naturel Régional en vert
+                                clair: c'est le parc du Caps et Marais d'Opale ! Les Etangs du
+                                Romelaëre sont représentés en vert foncé avec son statut de
+                                Réserve Naturelle Nationale. La surface bleue indique toute la
+                                zone protégée par la Convention Ramsar. Les autres protections
+                                ne sont pas indiquées sur cette carte mais vous pouvez les
+                                retrouver sur le site de
+                                <a style="text-decoration: none"
+                                    href="https://www.geoportail.gouv.fr/carte?c=2.1033147448853424,50.87745591224123&z=10&l0=World_Topo_Map::GEOPORTAIL:OGC:WMTS(1)&l1=PROTECTEDAREAS.PNR::GEOPORTAIL:OGC:WMTS(1)&l2=PROTECTEDAREAS.BIOS::GEOPORTAIL:OGC:WMTS(0.6)&l3=PROTECTEDAREAS.ZPS::GEOPORTAIL:OGC:WMTS(1)&l4=PROTECTEDAREAS.ZNIEFF1::GEOPORTAIL:OGC:WMTS(0.6)&l5=PROTECTEDAREAS.ZNIEFF2::GEOPORTAIL:OGC:WMTS(1)&l6=PROTECTEDAREAS.RAMSAR::GEOPORTAIL:OGC:WMTS(1)&l7=PROTECTEDAREAS.RN::GEOPORTAIL:OGC:WMTS(1)&permalink=yes">Géoportail</a>.
+                            </p>
+                        </div>
+                        <div class="row-6 ms-2">
+                            <div class="table-responsive">
+                                <table class="table table-bordered border-dark" id="table-protection">
+                                    <tr>
+                                        <th class="table-success border-dark">Protections</th>
+                                        <th class="table-success border-dark">Définitions</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">
+                                            Parc Naturel Régional
+                                        </td>
+                                        <td>
+                                            C'est un territoire ayant choisi volontairement un mode
+                                            de développement fondé sur la mise en valeur et la
+                                            protection de patrimoines naturels et culturels
+                                            considérés comme riches et fragiles. Ils sont créés par
+                                            décision du Conseil Régional et gérés par des syndicats
+                                            mixtes de collectivités territoriales.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">
+                                            Réserve de Biosphère
+                                        </td>
+                                        <td>
+                                            C'est un territoire reconnu par l'UNESCO conciliant la
+                                            conservation de la biodiversité et le développement
+                                            durable, avec l'appui de la recherche, de l'éducation et
+                                            de la sensibilisation, dans le cadre du programme sur
+                                            l'homme et la biosphère.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">
+                                            Réserve Naturelle Nationale
+                                        </td>
+                                        <td>
+                                            C'est une aire protégée faisant partie des réserves
+                                            naturelles de France et dont le statut est défini par la
+                                            loi relative à la démocratie de proximité du 27 février
+                                            2002. C'est un outil de protection à long terme
+                                            d'espaces, d'espèces ou d'objets géologiques. La durée
+                                            de sa protection est illimitée.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">
+                                            Site Natura 2000
+                                        </td>
+                                        <td>
+                                            Le réseau rassemble des sites naturels ou semi-naturels
+                                            de l'Union européenne ayant une grande valeur
+                                            patrimoniale, par la faune et la flore exceptionnelles
+                                            qu'ils contiennent. L'objectif est de maintenir la
+                                            diversité biologique des milieux, tout en tenant compte
+                                            des exigences économiques, sociales, culturelles et
+                                            régionales dans une logique de développement durable.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">ZNIEFF I</td>
+                                        <td>
+                                            Ceux sont des espaces homogènes écologiquement, définis
+                                            par la présence d'espèces, d'associations d'espèces ou
+                                            d'habitats rares, remarquables ou caractéristiques du
+                                            patrimoine naturel régional. Ce sont les zones les plus
+                                            remarquables du territoire.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">ZNIEFF II</td>
+                                        <td>
+                                            Ceux sont des espaces qui intègrent des ensembles
+                                            naturels fonctionnels et paysagers, possédant une
+                                            cohésion élevée et plus riches que les milieux
+                                            alentours.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">
+                                            Convention RAMSAR
+                                        </td>
+                                        <td>
+                                            C'est un traité international pour la conservation et le
+                                            développement durable des zones humides, qui vise à
+                                            enrayer leur dégradation ou disparition, aujourd'hui et
+                                            demain, en reconnaissant leurs fonctions écologiques
+                                            ainsi que leur valeur économique, culturelle,
+                                            scientifique et récréative.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col mt-5" data-aos="zoom-in" data-aos-duration="800">
-                    <div class="row">
-                        <div class="col-6">
-                            <h2>Comment s'y promener ?</h2>
-                            <p>
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23259.652682990745!2d2.270799218657474!3d50.78389380328583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dcf8562160a827%3A0xa52df2579a857a3!2s%C3%89tang%20de%20Romelaere!5e0!3m2!1sfr!2sfr!4v1712674207875!5m2!1sfr!2sfr"
-                                    width="600px" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </p>
+                <div class="row mt-5" data-aos="zoom-in" data-aos-duration="800">
+                    <div class="row" id="carte-sentier">
+                        <h2>Comment s'y promener ?</h2>
+                        <div class="col ms-5" id="div-carte">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23259.652682990745!2d2.270799218657474!3d50.78389380328583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dcf8562160a827%3A0xa52df2579a857a3!2s%C3%89tang%20de%20Romelaere!5e0!3m2!1sfr!2sfr!4v1712674207875!5m2!1sfr!2sfr"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                class="carte"></iframe>
+                            <a
+                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23259.652682990745!2d2.270799218657474!3d50.78389380328583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dcf8562160a827%3A0xa52df2579a857a3!2s%C3%89tang%20de%20Romelaere!5e0!3m2!1sfr!2sfr!4v1712674207875!5m2!1sfr!2sfr">
+                                Voir plan Google Map</a>
+
                         </div>
-                        <div class="col-6 mt-5" id="map">
-                            <p class="rounded" id="localisation">
-                                Les Etangs du Romelaëre sont situés à environ 1h de voiture de Lille et 50 minutes de
-                                Dunkerque. Pour une belle escapade, 3 sentiers de promenade sont accessibles: Sentier du Cormoran (4 km), 
-                                Sentier du Blongios (2,7 km), Sentier de Nieurlet (1,2 km). <br>
-                                <i style="font-size: small;">Cliquez sur le plan pour agrandir</i>
-                            </p>
-                            <figure><img src="../Image/plan-romelaere.png" alt="plan-romelaere" id="sentier"></figure>
+                        <div class="col" id="map">
+                            <div class="row">
+                                <div class="row">
+                                    <p class="rounded shadow" id="localisation">
+                                        Les Etangs du Romelaëre sont situés à environ 1h de voiture de
+                                        Lille et 50 minutes de Dunkerque. Pour une belle escapade, 3
+                                        sentiers de promenade sont accessibles: Sentier du Cormoran (4
+                                        km), Sentier du Blongios (2,7 km), Sentier de Nieurlet (1,2
+                                        km). <br />
+                                        <i style="font-size: small">Cliquez sur le plan pour agrandir</i>
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <figure>
+                                        <img src="../Image/plan-romelaere.png" alt="plan-romelaere" id="sentier" />
+                                    </figure>
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="source" class="rounded">
-            <h6 class="m-3">Sources et liens utiles</h6>
-            <ul style="list-style: none;">
-            <li>Vidéo : <a href="https://youtu.be/fkF-geRH9XI?si=f2aJjYwYQaeMOb7Y">Chaine : Le-Pas-de-Calais</a></li>
-            <li>INPN - Géoportail</li>
-            </ul>
-        </div>
 
-        <footer class=" d-flex justify-content-between mt-3" id="footer">
-            <div class=" d-flex justify-content-start">
-                <a href=""><i class="fa-brands fa-facebook fa-lg align-items-center" style="color: black;"
+        <nav id="source" class="rounded">
+            <h6>Sources et liens utiles</h6>
+            <ul style="list-style: none">
+                <li>
+                    Vidéo :
+                    <a href="https://youtu.be/fkF-geRH9XI?si=f2aJjYwYQaeMOb7Y">Chaine : Le-Pas-de-Calais</a>
+                </li>
+                <li>INPN - Géoportail</li>
+            </ul>
+        </nav>
+
+        <footer class="d-flex justify-content-between mt-3" id="footer">
+            <div class="d-flex justify-content-start">
+                <a href=""><i class="fa-brands fa-facebook fa-lg align-items-center" style="color: black"
                         id="fb"></i></a>
-                <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black" id="insta"></i></a>
             </div>
             <a href="" id="mentions">Mentions légales et Crédits</a>
             <a href="" id="plans">Plan du site</a>
             <a href="" id="contact">Contact</a>
-            
-            <button class="rounded" id="btn-abonner"><a href="" id="abonner">Abonnez-vous !</a></button>
+
+            <button class="rounded" id="btn-abonner">
+                <a href="" id="abonner">Abonnez-vous !</a>
+            </button>
         </footer>
-
     </div>
-
 </body>
 <script src="../JavaScript/vulga2.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

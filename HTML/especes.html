@@ -14,6 +14,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/vulga.css">
+    <link rel="stylesheet" href="../CSS/mediascreen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
@@ -21,14 +22,24 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container-fluid">
-                <div>
-                    <a href="accueil.html"><img src="../Image/logo.png" alt="logo" class="logo"></a>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <div class="container-fluid">
+            <div id="logo-btn">
+                <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title" id="sidebarLabel">Menu - Guide de l'Urbain</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="accueil.html">Accueil</a>
                         </li>
@@ -48,18 +59,21 @@
                             <a class="nav-link active" href="contact.html">Vos suggestions</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i
-                                class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                    <div><a href=""><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a></div>
-                    <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;"
-                                id="insta"></i></a></div>
                 </div>
             </div>
-        </nav>
-    </header>
+            <div class="d-flex align-items-center">
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search"
+                        id="searchbar">
+                    <button class="btn btn-outline-success" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <a href="" class="me-2"><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <div class="container-fluid">
         <div class="row-4">
@@ -69,7 +83,7 @@
         </div>
         <!-- Contenu page avec marge -->
         <div class="container" data-aos="fade-in">
-            <div class="row-1 mb-4" >
+            <div class="row-1 mb-3 mt-5">
                 <nav class="navbar rounded" id="navbar-article">
                     <div class="container-fluid">
                         <h1 id="titre-page-espece">Nos espèces <i class="fa-solid fa-dove"></i></h1>
@@ -100,38 +114,38 @@
             <div class="row-8">
                 <div class="row">
                     <!-- Article1 -->
-                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
-                        <img src="" alt="" class="miniature">
-                        <div>
+                    <div class="article-mini row-3 d-flex justify-content-between rounded">
+                        <img src="" alt="" class="miniature img-fluid">
+                        <section class="ms-3">
                             <h5>A venir</h5>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis porro quas maxime
                                 eaque
                                 voluptatum molestiae. Aliquid dignissimos illo dolorem tempore.</p>
-                            <div class="d-flex justify-content-between">
+                            <div class="filtre d-flex justify-content-between">
                                 <div>
                                     <ul class="d-flex" style="list-style: none;">
                                         <li class="btn-article rounded p-1 mx-3">2024</li>
                                         <li class="btn-article rounded p-1 mx-3">A venir</li>
                                     </ul>
                                 </div>
-                                <a href="" style="text-decoration: none;" class="btn-article rounded" id="suite">Lire la
+                                <a href="" style="text-decoration: none;" class="suite rounded">Lire la
                                     suite</a>
                             </div>
-                        </div>
+                        </section>
                     </div>
 
 
                     <!-- Article2 -->
-                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
-                        <img src="../Image/perruche2.jpg" alt="article-perruche" class="miniature">
-                        <div class="ms-3">
+                    <div class="article-mini row-3 d-flex justify-content-between rounded">
+                        <img src="../Image/perruche2.jpg" alt="article-perruche" class="miniature img-fluid">
+                        <section class="ms-3">
                             <h5>La Perruche à Collier</h5>
                             <p>La Perruche à collier, <i>Psittacula krameri</i>, un oiseau d’une quarantaine de
                                 centimètre. Son
                                 plumage possède des nuances de vert et de jaune. Sa queue est très longue, au dégradé
                                 bleuté, ses ailes plus foncées
                                 voir noires en vue du dessous.</p>
-                            <div class="d-flex justify-content-between">
+                            <div class="filtre d-flex justify-content-between">
                                 <div>
                                     <ul class="d-flex" style="list-style: none;">
                                         <li class="btn-article rounded p-1 mx-3">2024</li>
@@ -139,15 +153,15 @@
                                     </ul>
                                 </div>
                                 <a href="article-PerrucheCollier.html" style="text-decoration: none;"
-                                    class="btn-article rounded" id="suite">Lire la
+                                    class="suite rounded">Lire la
                                     suite</a>
                             </div>
-                        </div>
+                        </section>
                     </div>
                     <!-- Article 3 -->
-                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
-                        <img src="../Image/vulcain.JPG" alt="article-vulcain" class="miniature">
-                        <div class="ms-3">
+                    <div class="article-mini row-3 d-flex justify-content-between rounded">
+                        <img src="../Image/vulcain.JPG" alt="article-vulcain" class="miniature img-fluid">
+                        <section class="ms-3">
                             <h5>Le Vulcain</h5>
                             <p>Le Vulcain, ou <em>Vanessa atalanta</em>, porte son nom du dieu romain des forgerons. En
                                 effet, il est
@@ -157,7 +171,7 @@
                                 antérieures porte
                                 des tâches blanches et les ailes postérieures porte cette bande rougeoyante avec des
                                 tâches noires.</p>
-                            <div class="d-flex justify-content-between">
+                            <div class="filtre d-flex justify-content-between">
                                 <div>
                                     <ul class="d-flex" style="list-style: none;">
                                         <li class="btn-article rounded p-1 mx-3">2024</li>
@@ -165,16 +179,16 @@
                                     </ul>
                                 </div>
                                 <a href="article-Vulcain.html" style="text-decoration: none;"
-                                    class="btn-article rounded" id="suite">Lire la
+                                    class="suite rounded">Lire la
                                     suite</a>
                             </div>
-                        </div>
+                        </section>
                     </div>
 
                     <!-- Article 4 -->
-                    <div class="row-3 d-flex justify-content-between m-3 rounded" id="article-mini">
-                        <img src="../Image/rouge gorge.jpg" alt="article-rougegorge" class="miniature">
-                        <div class="ms-3">
+                    <div class="article-mini row-3 d-flex justify-content-between rounded">
+                        <img src="../Image/rouge gorge.jpg" alt="article-rougegorge" class="miniature img-fluid">
+                        <section class="ms-3">
                             <h5>Le Rouge Gorge Familier</h5>
                             <p>Le Rouge Gorge Familier, de son nom latin <em>Erithacus rubecula</em>, est un petit
                                 passereau rondelet à
@@ -183,18 +197,17 @@
                                 plutôt sur
                                 le blanc sali. Tout le
                                 reste tire sur le brun. La femelle et le mâle sont identiques.</p>
-                            <div class="d-flex justify-content-between">
+                            <div class="filtre d-flex justify-content-between">
                                 <div>
                                     <ul class="d-flex" style="list-style: none;">
                                         <li class="btn-article rounded p-1 mx-3">2023</li>
                                         <li class="btn-article rounded p-1 mx-3">Ornithologie</li>
                                     </ul>
                                 </div>
-                                <a href="article-RG.html" style="text-decoration: none;" class="btn-article rounded"
-                                    id="suite">Lire la
+                                <a href="article-RG.html" style="text-decoration: none;" class="suite rounded">Lire la
                                     suite</a>
                             </div>
-                        </div>
+                        </section>
                     </div>
 
                 </div>

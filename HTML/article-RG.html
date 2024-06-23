@@ -14,6 +14,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/vulga.css">
+    <link rel="stylesheet" href="../CSS/mediascreen2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
@@ -21,14 +22,24 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container-fluid">
-                <div>
-                    <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <div class="container-fluid">
+            <div id="logo-btn">
+                <a href=""><img src="../Image/logo.png" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title" id="sidebarLabel">Menu - Guide l'EcoUrbain</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="accueil.html">Accueil</a>
                         </li>
@@ -48,36 +59,39 @@
                             <a class="nav-link active" href="contact.html">Vos suggestions</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i
-                                class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                    <div><a href=""><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a></div>
-                    <div><a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;"
-                                id="insta"></i></a></div>
                 </div>
             </div>
-        </nav>
-    </header>
+            <div class="d-flex align-items-center">
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherchez" aria-label="Search"
+                        id="searchbar">
+                    <button class="btn btn-outline-success" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <a href="" class="me-2"><i class="fa-brands fa-facebook fa-lg" style="color: black;" id="fb"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram fa-lg" style="color: black;" id="insta"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <div class="container-fluid">
         <div>
-            <img src="../Image/ban-rougegorge.png" alt="ban-article" id="ban-article" class="image-transition">
+            <img src="../Image/ban-rougegorge.png" alt="ban-article" id="ban-article" class="image-transition img-fluid">
         </div>
         <div class="container">
             <div class="row">
                 <!-- Titre -->
                 <div class="row-3">
-                    <h1 class="text-center m-5" id="titre-article">Le Rouge-Gorge Familier</h1>
+                    <h1 class="text-center" id="titre-article">Le Rouge-Gorge Familier</h1>
                 </div>
                 <!-- Exemple organisation article -->
-                <div class="row-3" data-aos="zoom-out">
+                <div class="row-3" data-aos="fade-in" id="description">
                     <h2>Sa description</h2>
                     <p>Le Rouge Gorge Familier, de son nom latin <em>Erithacus rubecula</em>, est un petit passereau
                         rondelet à
                         <b>la poitrine orange très
-                            distincte bordée de gris</b>. Le plumage en dessous de ce poitrail est brun clair, tirant
+                            distincte bordée de gris</b>. <br>Le plumage en dessous de ce poitrail est brun clair, tirant
                         plutôt sur
                         le blanc sali. Tout le
                         reste tire sur le brun. La femelle et le mâle sont identiques. Leur petit est brun taché de
@@ -104,13 +118,11 @@
                         partent de
                         nuit seul ou en petits
                         groupes tandis que la journée, ils se reposent et se nourrissent.</p>
-
-
-
                 </div>
-                <div class="row-3" data-aos="zoom-out">
+
+                <div class="row-3" data-aos="fade-in">
                     <div class="row mt-5 rounded" id="identification">
-                        <div class="col-8">
+                        <div class="col-9">
                             <h2>Où et comment le trouver ?</h2>
                             <p>
                                 Cet oiseau se retrouve surtout dans les forêts. Cependant, <b>il visite différents
@@ -129,16 +141,16 @@
                             </p>
                         </div>
 
-                        <div class="col-4">
-                            <img src="../Image/rougegorge2.jpg" alt="rougegorge" class="rounded-circle" id="chant-photo"
-                                style="margin-left: 18vh;">
+                        <div class="col-3">
+                            <img src="../Image/rougegorge2.jpg" alt="rougegorge" class="rounded-circle img-fluid"
+                                id="chant-photo">
                             <audio id="chant-oiseaux">
                                 <source src="../Audio/BIRDSong_Rouge gorge 1 (ID 1667)_LS.mp3" type="audio/mp3">
                         </div>
                     </div>
                 </div>
                 <div class="row-3">
-                    <div class="row mt-5" data-aos="zoom-out">
+                    <div class="row mt-5" data-aos="fade-in"  id="evolution-menace">
                         <div class="col-6">
                             <h2>Son évolution et ses menaces</h2>
                             <p>En France, son statut établi par la Liste Rouge des oiseaux nicheurs de 2016 est
@@ -149,57 +161,70 @@
                                 l’espèce est tout de même <b>menacée par certains prédateurs</b> du fait de son nid
                                 pouvant
                                 être au sol. Il peut être également
-                                victime de chasse à la glu ou du prélèvement au filet.</p>
-                            <figure><img src="../Image/image_4553.jpg" alt="nidrougegorge" class="illu">
+                                victime de chasse à la glu ou du prélèvement au filet.
+                            </p>
+                            <figure><img src="../Image/image_4553.jpg" alt="nidrougegorge" class="illu img-fluid">
                             </figure>
                         </div>
                         <div class="col-6">
                             <h2>Ses protections</h2>
-                            <table class="table table-bordered border-dark" id="table-protection">
-                                <tr>
-                                    <th class="table-success border-dark">Protections</th>
-                                    <th class="table-success border-dark">Définitions</th>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Arrêté du 29 Octobre 2009</td>
-                                    <td>Interdiction de le détruire, le mutiler, le capturer ou l'enlever, de le
-                                        perturber intentionnellement ou de le naturaliser,
-                                        ainsi que de détruire ou enlever les œufs et les nids, et de détruire, altérer
-                                        ou dégrader son milieu. Qu'il soit vivant
-                                        ou mort, il est aussi interdit de le transporter, colporter, de l'utiliser, de
-                                        le détenir, de le vendre ou de l'acheter
-                                        s'il s'agit d'oiseaux prélevés dans le milieu naturel. Depuis mars 2006 et en
-                                        application de la réglementation
-                                        européenne, les oiseaux d'élevage ne sont plus concernés par ces interdictions.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Convention européenne de Berne</td>
-                                    <td>Assure des protections de la flore et la faune sauvage en particulier lors de
-                                        l'élaboration de la politique nationale
-                                        d'aménagement et de développement, ainsi que dans la lutte contre la pollution.
-                                        Les Parties encouragent aussi l'éducation et la diffusion d'informations
-                                        générales concernant la nécessité de conserver
-                                        le patrimoine naturel sauvage.</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-success border-dark">Convention européenne de Bonn</td>
-                                    <td>Assure la conservation des espèces migratoires terrestres, marines et aériennes
-                                        sur l'ensemble de leur aire de
-                                        répartition. les Parties sont invitées à conclure des ententes pour préserver
-                                        les espèces dont l'état de conservation
-                                        est défavorable ou qui pourraient bénéficier de la coopération internationale.
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered border-dark" id="table-protection">
+                                    <tr>
+                                        <th class="table-success border-dark">Protections</th>
+                                        <th class="table-success border-dark">Définitions</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Arrêté du 29 Octobre 2009</td>
+                                        <td>Interdiction de le détruire, le mutiler, le capturer ou l'enlever, de le
+                                            perturber intentionnellement ou de le naturaliser,
+                                            ainsi que de détruire ou enlever les œufs et les nids, et de détruire,
+                                            altérer
+                                            ou dégrader son milieu. Qu'il soit vivant
+                                            ou mort, il est aussi interdit de le transporter, colporter, de l'utiliser,
+                                            de
+                                            le détenir, de le vendre ou de l'acheter
+                                            s'il s'agit d'oiseaux prélevés dans le milieu naturel. Depuis mars 2006 et
+                                            en
+                                            application de la réglementation
+                                            européenne, les oiseaux d'élevage ne sont plus concernés par ces
+                                            interdictions.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Convention européenne de Berne</td>
+                                        <td>Assure des protections de la flore et la faune sauvage en particulier lors
+                                            de
+                                            l'élaboration de la politique nationale
+                                            d'aménagement et de développement, ainsi que dans la lutte contre la
+                                            pollution.
+                                            Les Parties encouragent aussi l'éducation et la diffusion d'informations
+                                            générales concernant la nécessité de conserver
+                                            le patrimoine naturel sauvage.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-success border-dark">Convention européenne de Bonn</td>
+                                        <td>Assure la conservation des espèces migratoires terrestres, marines et
+                                            aériennes
+                                            sur l'ensemble de leur aire de
+                                            répartition. les Parties sont invitées à conclure des ententes pour
+                                            préserver
+                                            les espèces dont l'état de conservation
+                                            est défavorable ou qui pourraient bénéficier de la coopération
+                                            internationale.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-        <div id="source" class="rounded">
-            <h6 class="m-3">Sources et liens utiles</h6>
+        <nav id="source" class="rounded">
+            <h6>Sources et liens utiles</h6>
             <ul style="list-style: none;">
                 <li>Photos : Wirestock : Freepik - Lumiks Lumiks : Flickr - Saisons-vives</li>
                 <li><a href="https://inpn.mnhn.fr/espece/cd_nom/4001">INPN</a></li>
@@ -212,7 +237,7 @@
                         Convention de Berne - COE</a></li>
                 <li><a href="https://www.cms.int/fr/page/texte-de-la-convention "> Convention de Bonn - CMS</a></li>
             </ul>
-        </div>
+        </nav>
 
         <footer class=" d-flex justify-content-between mt-3" id="footer">
             <div class=" d-flex justify-content-start">
