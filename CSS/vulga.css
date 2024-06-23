@@ -1,402 +1,511 @@
-
 /* Accueil */
-body{
-background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1)), url(../Image/fond-feuille.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
+body {
+  background-image: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url(../Image/fond-feuille.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #carousel {
-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
-p{
-text-indent: 5%
+p {
+  text-indent: 5%;
 }
-.logo{
-height: 8vh;
-width: 8vh;
-}
-
-#navbar,#footer{
-background-image: linear-gradient(to bottom, #91aea0, white);
+.logo {
+  height: 8vh;
+  width: 8vh;
 }
 
-.nav-item{
-font-size: 20px;
-margin: 0.6vh;
-color: black;
-font-family: "Sriracha", cursive;
-transition: 0.6s ease;
+#navbar,
+#footer {
+  background-image: linear-gradient(to bottom, #91aea0, white);
 }
 
-
-.nav-item:hover {
-font-weight: bold;
+.nav-item {
+  font-size: 1.2rem;
+  margin: 0.6vh;
+  font-family: "Sriracha", cursive;
+  transition: all 400ms ease-in-out;
+  &:hover {
+    font-weight: bold;
+  }
 }
 
-#fb, #insta{
-margin: 0.6vh;
+.offcanvas {
+  width: 10vh; /* définir la largeur de la sidebar */
+  height: 100vh; /* définir la hauteur de la sidebar */
+  overflow-y: auto; /* ajouter une barre de défilement vertical si le contenu est trop long */
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
-#logo-urbain, #logo-urbain2{
-height: 50vh;
-width: 50vh;
+#fb,
+#insta {
+  margin: 0.6vh;
 }
 
-h1{
-font-size: 35px;
-color: #1e7e5d;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-margin-top: 1vh;
-font-family: "Sriracha", cursive;
+#logo-urbain {
+  width: 60%;
+  margin: 0 20vh 0 20vh;
 }
 
-h2, h5 {
-    font-size: 30px;
-    color: #1e7e5d;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: "Sriracha", cursive;
+#logo-urbain2 {
+  width: 100%;
+  height: 90%;
 }
 
-#intro{
-font-size: 20px;
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+h1 {
+  font-size: 2rem;
+  color: #1e7e5d;
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.5);
+  margin-top: 6vh;
+  font-family: "Sriracha", cursive;
 }
 
-#def, #news{
-font-size: 20px;
-padding: 3vh;
-background-color:rgba(20, 102, 49, 0.5);
-box-shadow: 0 0 10px rgba(0, 0.5, 0.5, 1);
-margin: 5vh;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-border-radius: 10% 0 10% 0;
+h2,
+h5 {
+  font-size: 1.8rem;
+  color: #1e7e5d;
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.5);
+  font-family: "Sriracha", cursive;
 }
 
-#mini-especes-accueil{
-padding: 10vh;
-border: 2px solid #1e7e5d;
-background-image: url(../Image/mini-especes-accueil.JPG);
-background-size: cover;
-background-repeat: no-repeat;
-transition: box-shadow 0.5s ease;
+#intro {
+  font-size: 1.1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 3vh;
 }
 
-#mini-conseil-accueil{
-padding: 10vh;
-border: 2px solid #1e7e5d;
-background-image: url(../Image/mini-conseil-acceuil.JPG);
-background-size: cover;
-background-repeat: no-repeat;
-transition: box-shadow 0.5s ease;
+#def,
+#news {
+  font-size: 1.1rem;
+  padding: 3vh;
+  background-color: rgba(20, 102, 49, 0.5);
+  box-shadow: 0 0 1vh rgba(0, 0.5, 0.5, 1);
+  margin: 5vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-radius: 1rem 0 1rem 0;
+}
+
+#mini-especes-accueil {
+  padding: 10vh;
+  border: 0.4vh solid #1e7e5d;
+  background-image: url(../Image/mini-especes-accueil.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  transition: all 0.5s ease;
+  margin: 0 3vh 3vh 3vh;
+}
+
+#mini-conseil-accueil {
+  padding: 10vh;
+  border: 0.4vh solid #1e7e5d;
+  background-image: url(../Image/mini-conseil-acceuil.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  transition: all 0.5s ease;
+  margin: 0 3vh 3vh 3vh;
 }
 
 #mini-sortie-accueil {
-padding: 10vh;
-border: 0.3vh solid #1e7e5d;
- background-image: url(../Image/mini-sortie-accueil.JPG);
- background-size: cover;
- background-repeat: no-repeat;
-transition: box-shadow 0.5s ease;
+  padding: 10vh;
+  border: 0.4vh solid #1e7e5d;
+  background-image: url(../Image/mini-sortie-accueil.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  transition: all 0.5s ease;
+  margin: 0 3vh 3vh 3vh;
 }
 
 #mini-event-accueil {
-padding: 10vh;
-border: 2px solid #1e7e5d;
-background-image: url(../Image/assoc.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-transition: box-shadow 0.5s ease;
+  padding: 10vh;
+  border: 0.4vh solid #1e7e5d;
+  background-image: url(../Image/assoc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  transition: all 0.5s ease;
+  margin: 0 3vh 3vh 3vh;
 }
 
-.texte-mini{
-text-decoration: none;
-color: white;
-font-size: 30px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-font-family: "Sriracha", cursive;
+.texte-mini {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.5);
+  font-family: "Sriracha", cursive;
 }
 
-#mini-nav{
-margin: 10vh 0 20vh 0;
+#mini-nav {
+  margin: 10vh 0 10vh 0;
 }
 
-#mini-nav .col:hover{
-box-shadow: 10px 5px 10px rgba(30, 126, 92, 0.6)
+#mini-nav .col:hover {
+  box-shadow: 1vh 0.5vh 1vh rgba(30, 126, 92, 0.6);
 }
 
 #mini-nav .col a:hover {
-font-weight: 600;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  font-weight: 600;
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 1);
 }
 
-#abonner, #mentions, #plans, #contact{
-text-decoration: none;
-color: black;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+#abonner,
+#mentions,
+#plans,
+#contact {
+  text-decoration: none;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-#btn-abonner{
-background-color: #7a946e;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+#btn-abonner {
+  background-color: #7a946e;
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.4);
 }
 
-#news{
-margin: 10vh 0 30vh 0;
+#news {
+  margin: 10vh 0 30vh 0;
+}
+
+#suggestions {
+  border-right: 0.5vh solid rgba(20, 102, 49, 0.5);
+}
+
+.btn {
+  text-align: center;
 }
 
 /* Page Contact */
-#btn-envoi, #btn-news{
-border: 0.3vh solid #1e7e5d; 
-background-color: #91aea0;
-transition: background-color 0.5s ease;
+#btn-envoi,
+#btn-news {
+  border: 0.3vh solid #1e7e5d;
+  background-color: #91aea0;
+  transition: background-color 0.5s ease;
 }
 
-#btn-envoi:hover, #btn-news:hover{
-background-color: #1e7e5d;
-font-weight: bold;
+#btn-envoi:hover,
+#btn-news:hover {
+  background-color: #1e7e5d;
+  font-weight: bold;
 }
 
-#idees{
-margin-left: 20vh;
-width: 40%;
+#idees {
+  margin-left: 20vh;
+  width: 40%;
+}
+
+#icon-news {
+  width: 100%;
+}
+
+#animation-contact{
+width: 500px; 
+height: 500px;
+}
+
+#form-contact h1{
+font-size: 1.8rem;
+}
+
+#form-contact h2{
+font-size: 1.6rem;
 }
 
 /* Page Article espèces */
 
-#ban-milieu{
-width: 100%;
-height: 80%;
-display: block;
+#ban-milieu {
+  width: 100%;
+  height: 80%;
+  display: block;
 }
 
 .image-transition {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    /* Transition de 1 seconde avec un effet de fondu */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  /* Transition de 1 seconde avec un effet de fondu */
 }
 
 .image-transition.loaded {
-    opacity: 1;
-}
- 
-
-.miniature{
-border-radius: 50%;
-height: 15vh;
-width: 15vh;
-border: 0.2vh solid black;
-box-shadow: 0 0 20px rgba(1, 1, 0, 0.5);
+  opacity: 1;
 }
 
-#article-mini{
-padding: 2vh;
-border: 0.3vh solid #7a946e;
-transition: background-color 0.5s ease;
+.miniature {
+  border-radius: 50%;
+  height: 15vh;
+  width: 15vh;
+  border: 0.2vh solid black;
+  box-shadow: 0 0 20px rgba(1, 1, 0, 0.5);
+  object-fit: fill;
 }
 
-#article-mini:hover{
-border: 0.4vh solid #64795A;
-background-color: #c7ccc8;
+.article-mini {
+  padding: 2vh;
+  margin: 3vh 0 0 0;
+  border: 0.3vh solid #7a946e;
+  background-color: rgba(128, 128, 128, 0.25);
+  overflow-wrap: break-word;
+  transition: background-color 0.5s ease;
+  &:hover {
+    border: 0.3vh solid #64795a;
+    background-color: #c7ccc8;
+  }
 }
 
-.btn-article{
-background-color: #7a946e;
-color: black;
+.btn-article, .btn-article-event {
+  background-color: #7a946e;
+  color: black;
+  padding: 0.5vh 1vh 0.5vh 1vh;
+  height: 4vh;
+  border: 0.2vh solid #abd398;
 }
 
-#suite{
-padding: 1vh 1vh;
-border: 0.2vh solid #abd398;
-background-color: #7a946e;
-color: black;
-transition:  background-color, border, font-weight 0.3s ease;
+.suite {
+  padding: 0.2vh 0.8vh 0.2vh 0.8vh;
+  height: 4vh;
+  border: 0.2vh solid #abd398;
+  background-color: #7a946e;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border: 0.2vh solid #abd398;
+    background-color: #cadfc0;
+  }
 }
 
-#suite:hover{
-border: 0.3vh solid #abd398;
-background-color: #cadfc0;
-font-weight: 600;
+.page {
+  text-decoration: none;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.1rem;
+  margin-left: 0.3vh;
+  margin-top: 3vh;
+  &:hover {
+    color: #64795a;
+    font-weight: 400;
+  }
 }
 
-.page{
-text-decoration: none;
-color: black;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: 20px;
-margin-left: 0.3vh;
+#navbar-article {
+  background-image: linear-gradient(to bottom, #c7ccc8, white);
+    padding: 0.5rem 1.5rem;
 }
 
-.page:hover{
-color: #64795A;
-font-weight: 400;
+#navbar-article h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  /* Ajustez la taille du titre pour les écrans de taille tablette */
 }
 
-#navbar-article{
-background-image: linear-gradient(to bottom, #c7ccc8, white);
+#navbar-article .dropdown-toggle,
+#navbar-article .form-control,
+#navbar-article .btn-outline-success {
+  font-size: 1rem;
+  /* Ajustez la taille de la police pour les autres éléments */
+  height: 4vh;
+  /* Ajustez la hauteur pour les autres éléments */
 }
 
-#titre-page-espece{
-font-size: 30px;
-color: black;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-font-family: "Sriracha", cursive;
+
+#navbar-article .dropdown-toggle {
+  margin-right: 1rem;
+}
+
+#titre-page-espece {
+  font-size: 1.7rem;
+  color: black;
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.5);
+  font-family: "Sriracha", cursive;
 }
 
 /* Page article détaillée */
 #ban-article {
-width: 100%;
-height: 70vh;    
+  width: 100%;
+  height: 70vh;
 }
 
-#titre-article-milieu{
-position: absolute;
-top: 95%;
-right: 0%;
- transform: translateY(-50%);
-text-shadow: 5px 2px 6px rgba(0, 0, 0, 1);
-color: white;
-padding: 1vh;
-font-size: 35px;
-border-radius: 10% 0 10% 0;
+#titre-article-milieu {
+  position: absolute;
+  top: 95%;
+  right: 0%;;
+  z-index: 1;
+  transform: translateY(-50%);
+  text-shadow: 0.5vh 0.5vh 0.6vh rgba(0, 0, 0, 1);
+  color: white;
+  padding: 1vh;
+  font-size: 2.2rem;
+  display: none;
 }
 
-
-#titre-article2, #titre-article {
-    position: relative;
+#titre-article2,
+#titre-article {
+  position: relative;
+  margin: 5vh;
 }
 
-#titre-article2::before, #titre-article::before,
-#titre-article2::after, #titre-article::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 30%;
-    /* Ajustez la largeur selon vos besoins */
-    height: 3px;
-    /* Ajustez l'épaisseur selon vos besoins */
-    background-color: #1e7e5d;
-    /* Couleur des lignes */
+#titre-article2::before,
+#titre-article::before,
+#titre-article2::after,
+#titre-article::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  /* Ajustez la largeur selon vos besoins */
+  height: 0.3vh;
+  /* Ajustez l'épaisseur selon vos besoins */
+  background-color: #1e7e5d;
+  /* Couleur des lignes */
 }
 
-#titre-article2::before, #titre-article::before {
-    left: -50px;
-    /* Ajustez la position de la ligne de gauche */
+#titre-article2::before,
+#titre-article::before {
+  left: -5vh;
+  /* Ajustez la position de la ligne de gauche */
 }
 
-#titre-article2::after, #titre-article::after {
-    right: -50px;
-    /* Ajustez la position de la ligne de droite */
+#titre-article2::after,
+#titre-article::after {
+  right: -5vh;
+  /* Ajustez la position de la ligne de droite */
 }
 
-
-#identification{
-border: 0.3vh solid #64795A;
-background-image: url(../Image/foret-fond.jpg),linear-gradient(to top, rgba(255, 255, 255, 0.5), white);
-background-blend-mode: overlay;
-background-size: cover;
-background-repeat: no-repeat;
-padding: 3vh;
+#identification {
+  border: 0.3vh solid #64795a;
+  background-image: url(../Image/foret-fond.jpg),
+    linear-gradient(to top, rgba(255, 255, 255, 0.5), white);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  padding: 3vh;
 }
 
 #identification2 {
-    border: 0.3vh solid #64795A;
-    background-image: url(../Image/fond-ortie.jpg), linear-gradient(to top, rgba(255, 255, 255, 0.35), white);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 3vh;
+  border: 0.3vh solid #64795a;
+  background-image: url(../Image/fond-ortie.jpg),
+    linear-gradient(to top, rgba(255, 255, 255, 0.35), white);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  padding: 3vh;
 }
-#chant-photo{
-width: 30vh;
-height: 30vh;
-border: 0.2vh solid black;
-box-shadow: 0 0 20px rgba(1, 1, 0, 0.5);
-transition: border 0.2s ease;
-}
-
-#mini-photo {
-    width: 30vh;
-    height: 30vh;
-    border: 0.2vh solid black;
-    box-shadow: 0 0 20px rgba(1, 1, 0, 0.5);
-    transition: border 0.2s ease;
-}
-
-#chant-photo:hover {
- border: 0.4vh solid black;
+#chant-photo {
+  width: 30vh;
+  height: 30vh;
+  border: 0.2vh solid black;
+  box-shadow: 0 0 2vh rgba(1, 1, 0, 0.5);
+  object-fit: fill;
+  transition: border 0.2s ease;
+  &:hover {
+    border: 0.4vh solid black;
+  }
 }
 
 .illu {
-height: 100%;
-width: 95%;
-border: 0.2vh solid #64795A;
-border-radius: 25% 0 25% 0;
-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0.6, 0.6);
+  height: 100%;
+  width: 95%;
+  border: 0.2vh solid #64795a;
+  border-radius: 2rem 0 2rem 0;
+  box-shadow: 0.5vh 0.5vh 2vh 0.5vh rgba(0, 0, 0.6, 0.6);
+  object-fit: fill;
 }
 
-#illu2{
-border: 0.2vh solid #64795A;
-border-radius: 0 25% 0 25%;
-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0.6, 0.6);
-margin: 10vh 0 0 20vh;
-height: 58vh;
+.illu2 {
+  border: 0.2vh solid #64795a;
+  border-radius: 0 2rem 0 2rem;
+  box-shadow: 0.5vh 0.5vh 2vh 0.5vh rgba(0, 0, 0.6, 0.6);
+  margin: 12vh 0 0 20vh;
+  height: 58vh;
+  object-fit: fill;
 }
 
-.illu-perruche{
-width: 40vw;
-height: 50vh;
-border: 0.2vh solid #64795A;
-border-radius: 25% 0 25% 0;
-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0.6, 0.6);
+.illu-perruche {
+  width: 40vw;
+  height: 50vh;
+  border: 0.2vh solid #64795a;
+  border-radius: 2rem 0 2rem 0;
+  box-shadow: 0.5vh 0.5vh 2vh 0.5vh rgba(0, 0, 0.6, 0.6);
+  object-fit: fill;
+  margin: 5vh;
 }
 
-#questions, #reponses {
-padding: 3vh;
-border: 0.2vh solid #64795A;
-background-color: #c7ccc8;
+#questions,
+#reponses {
+  padding: 3vh 5vh 3vh 5vh;
+  border: 0.2vh solid #64795a;
+  background-color: #c7ccc8;
+  margin: auto;
+}
+
+#table-protection {
+  width: 82vh;
+  height: 90%;
+}
+
+h6 {
+  font-size: 1.2rem;
+  color: #1e7e5d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Sriracha", cursive;
+}
+
+#source {
+  background-image: linear-gradient(to bottom, #c7ccc8, white);
+  margin-top: 10vh;
 }
 
 #table-protection{
-width: 82vh;
-height: 90%;
-}
-
-h6{
-font-size: 30px;
-color: #1e7e5d;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-font-family: "Sriracha", cursive;
-}
-
-#source{
-background-image: linear-gradient(to bottom, #c7ccc8, white);
-margin-top: 10vh;
+width: 100%;
 }
 
 /* Article réserve naturelle */
-#description-milieu{
-background-color:rgba(20, 102, 49, 0.3); 
-padding: 2vh;
-border-radius: 30% 10% 30% 10%;
-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0.6, 0.6);
+#description-milieu {
+  background-color: rgba(20, 102, 49, 0.3);
+  padding: 2vh 10vh;
+  border-radius: 3rem 0rem 3rem 0rem;
+  margin-top:2vh;
+  margin: auto;
 }
 
-#localisation{
-background-color: rgba(20, 102, 49, 0.3);
-padding: 2vh;
-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0.6, 0.6);
+#localisation {
+  background-color: rgba(20, 102, 49, 0.3);
+  padding: 2vh;
+  margin-top: 2vh;
 }
 
-#sentier{
-width: 630px;
-height: 350px;
-transition: transform 2s;
+.carte{
+width:90%;
+height:65vh;
 }
 
-.zoom{
-transform: scale(2) translate(-25%, 0%);
-position:absolute;
+#div-carte a {
+display: none;
 }
+
+#sentier {
+  width: 100%;
+  transition: transform 2s;
+  &:hover{
+  transform: scale(2) translate(-25%,0%);
+  }
+}
+
+/* .zoom {
+  transform: scale(2) translate(-25%, 0%);
+  position: absolute;
+} */
