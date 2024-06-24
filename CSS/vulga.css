@@ -337,21 +337,8 @@ font-size: 1.6rem;
   height: 70vh;
 }
 
-#titre-article-milieu {
-  position: absolute;
-  top: 95%;
-  right: 0%;;
-  z-index: 1;
-  transform: translateY(-50%);
-  text-shadow: 0.5vh 0.5vh 0.6vh rgba(0, 0, 0, 1);
-  color: white;
-  padding: 1vh;
-  font-size: 2.2rem;
-  display: none;
-}
-
 #titre-article2,
-#titre-article {
+#titre-article, #titre-article-milieu {
   position: relative;
   margin: 5vh;
 }
@@ -359,7 +346,7 @@ font-size: 1.6rem;
 #titre-article2::before,
 #titre-article::before,
 #titre-article2::after,
-#titre-article::after {
+#titre-article::after, #titre-article-milieu::before, #titre-article-milieu::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -372,13 +359,13 @@ font-size: 1.6rem;
 }
 
 #titre-article2::before,
-#titre-article::before {
+#titre-article::before, #titre-article-milieu::before {
   left: -5vh;
   /* Ajustez la position de la ligne de gauche */
 }
 
 #titre-article2::after,
-#titre-article::after {
+#titre-article::after, #titre-article-milieu::after {
   right: -5vh;
   /* Ajustez la position de la ligne de droite */
 }
